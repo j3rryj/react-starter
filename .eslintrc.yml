@@ -1,0 +1,27 @@
+parser: babel-eslint
+plugins:
+  - babel
+  - prettier
+  - react
+env:
+  jest: true
+  es6: true
+  browser: true
+  node: true
+rules:
+  prettier/prettier: error
+  no-unused-vars: error
+  no-undef: error
+  react/prop-types: warn
+extends:
+  - plugin:prettier/recommended
+  - plugin:react/recommended
+parserOptions:
+  sourceType: module
+  ecmaVersion: 10
+  ecmaFeatures:
+    jsx: true
+    experimentalObjectRestSpread: true
+settings:
+  react:
+    version: detect
